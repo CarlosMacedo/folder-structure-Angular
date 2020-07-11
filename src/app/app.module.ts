@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CoreModule } from '@core/core.module';
-
+import { TitleComponent } from '@shared/index';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TitleComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
