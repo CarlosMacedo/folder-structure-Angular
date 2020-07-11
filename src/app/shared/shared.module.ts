@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MenuComponent } from './components/menu/menu.component';
 import * as arrayComponents from './index';
 
 @NgModule({
-  declarations: [MenuComponent, ...arrayComponents.components],
+  declarations: [...arrayComponents.components],
   imports: [CommonModule],
   exports: [...arrayComponents.components],
 })
