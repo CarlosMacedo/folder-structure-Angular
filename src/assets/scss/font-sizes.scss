@@ -1,13 +1,22 @@
+/*
+ * PLEASANT READING. BEST PRACTICES
+ * Number of characters in <p> = 65.
+ * Number of words in oneline = 10/15.
+ * max-width = font-size (px) * 30.
+ * line-height = 140% the height of the font
+ * The title size must be multiple of the text size (e.g. text: 1.6 and title:3.2em). 
+ */
+
 //doc: https://sass-lang.com/documentation
 
 :root {
   --size-1: 1em;
-  --size-2: 1.2em;
+  --size-2: 1.2em; //read mobile
   --size-3: 1.4em;
-  --size-4: 1.6em;
+  --size-4: 1.6em; //read desktop
   --size-5: 1.8em;
   --size-6: 2em;
-  --size-7: 2.2em;
+  --size-7: 2.2em; //read desktop:bigger
   --size-8: 2.6em;
   --size-9: 2.9em;
   --size-10: 3.1em;
