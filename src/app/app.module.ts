@@ -1,20 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
 
 import { CoreModule } from '@core/core.module';
-import { TitleComponent } from '@shared/index';
+import { MenuComponent, TitleComponent } from '@shared/components';
+
 @NgModule({
-  declarations: [AppComponent, TitleComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    CoreModule,
-  ],
+  declarations: [AppComponent, MenuComponent, TitleComponent],
+  imports: [AppRoutingModule, BrowserModule, CoreModule],
   providers: [],
   bootstrap: [AppComponent],
 })

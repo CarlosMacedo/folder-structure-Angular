@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./title.component.scss'],
 })
 export class TitleComponent implements OnInit {
-  private _title: string = 'padrão';
+  private _title: string = '';
 
   @Input() set title(title: string) {
     this._title = title.toUpperCase();
