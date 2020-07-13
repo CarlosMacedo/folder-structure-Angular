@@ -4,11 +4,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { CoreModule } from '@core/core.module';
-import { MenuComponent, TitleComponent } from '@shared/components';
+
+import { HomePageModule } from './_features/_home-page/_home-page.module';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, TitleComponent],
-  imports: [AppRoutingModule, BrowserModule, CoreModule],
+  declarations: [AppComponent],
+  imports: [AppRoutingModule, BrowserModule, CoreModule, HomePageModule],
   providers: [],
   bootstrap: [AppComponent],
 })
