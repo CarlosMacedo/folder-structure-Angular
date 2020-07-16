@@ -1,9 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { backgroundAnimate } from './animations/background-animation';
 
 @Component({
   selector: 'app-title',
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss'],
+  animations: [backgroundAnimate],
 })
 export class TitleComponent implements OnInit {
   private _title: string = '';
