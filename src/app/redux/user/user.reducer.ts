@@ -1,5 +1,4 @@
-import { IState } from './IState.interface';
-
+import { IState } from './';
 import { initialState } from './initialState.store';
 import * as UserActions from './user.actions';
 

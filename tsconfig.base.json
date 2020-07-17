@@ -7,6 +7,8 @@
       "@env": ["src/environments/environment"],
       "@shared/*": ["src/app/shared/*"],
       "@core/*": ["src/app/core/*"],
+      "@error/*": ["src/app/error/*"],
+      "@redux/*": ["src/app/redux/*"],
       "@assets/*": ["src/assets/*"]
     },
     "outDir": "./dist/out-tsc",

@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '@env';
 
-import { appReducer } from '../redux';
+import { appReducer } from '@redux/index';
 
 @NgModule({
   declarations: [],

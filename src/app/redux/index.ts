@@ -1,13 +1,12 @@
 import { ActionReducerMap } from '@ngrx/store';
-import { Types } from './user/user.actions';
-import { IState } from './user/IState.interface';
-import { userReducer } from './user/user.reducer';
+import { IState, Types, userReducer } from './user';
 
 export interface AppState {
+  //List of all states
   user: IState;
 }
 
 export const appReducer: ActionReducerMap<AppState, Types> = {
-  //List of reducers
+  //List of all reducers
   user: userReducer,
 };

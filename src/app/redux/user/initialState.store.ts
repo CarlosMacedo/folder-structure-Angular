@@ -1,4 +1,4 @@
-import { IState } from './IState.interface';
+import { IState } from './';
 
 export const initialState: IState = {
   profile: {
