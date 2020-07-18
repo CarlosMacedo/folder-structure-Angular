@@ -3,6 +3,10 @@
 @import "./assets/scss/font-sizes.scss";
 @import "./assets/scss/font-families.scss";
 
+/* 
+ * Defaut
+ */
+
 html,
 body {
   height: 100%;
@@ -13,6 +17,10 @@ body {
   margin: 0;
   font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+/* 
+ * Fonts 
+ */
 
 @font-face {
   font-family: Consolas;

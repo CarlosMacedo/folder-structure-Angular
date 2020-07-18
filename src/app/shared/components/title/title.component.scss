@@ -15,7 +15,13 @@ p {
   user-select: none;
 }
 
-p:hover {
-  cursor: pointer;
-  color: white;
+/* 
+ * Only in Desktop
+ */
+
+@media (hover: hover) {
+  p:hover {
+    cursor: pointer;
+    color: white;
+  }
 }
