@@ -8,7 +8,33 @@ body {
   height: 100%;
   font-size: 62.5%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@font-face {
+  font-family: Consolas;
+  src: url(assets/fonts/Consolas/consolas.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Dinomouse";
+  src: url(assets/fonts/Dinomouse/Dinomouse-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: GeosansLight;
+  src: url(assets/fonts/GeosansLight/GeosansLight.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url(assets/fonts/Helvetica/helvetica-neue.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Walkway;
+  src: url(assets/fonts/Walkway/Walkway.ttf) format("opentype");
 }
