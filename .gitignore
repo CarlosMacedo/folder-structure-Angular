@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+#electron
+/folder-structure-with-services-win32-x64
+/hello-world-installer
+
 # compiled output
 /dist
 /tmp
