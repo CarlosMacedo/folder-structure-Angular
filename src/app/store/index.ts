@@ -11,4 +11,4 @@ export const appReducer: ActionReducerMap<AppState, Types> = {
   user: userReducer,
 };
 
-export { UserEffects } from './user';
+export { UserActions, UserEffects } from './user';

@@ -23,6 +23,7 @@ export function userReducer(
           id: action.payload,
         },
       };
+    case UserActions.LOGIN_START:
     default:
       return state;
   }

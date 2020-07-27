@@ -7,7 +7,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 
-import { appReducer, UserEffects } from '@redux/index';
+import { appReducer, UserEffects } from '@store/index';
 
 import { environment } from '@env';
 
