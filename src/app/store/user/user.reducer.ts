@@ -1,11 +1,15 @@
-import { IState } from './';
-import { initialState } from './initialState.store';
+import { ActionReducerMap } from '@ngrx/store';
 import * as UserActions from './user.actions';
 
-export function userReducer(
-  state: IState = initialState,
-  action: UserActions.Types
-) {
+const initialState: IState = {
+  profile: {
+    id: '',
+    name: '',
+    email: '',
+  },
+};
+
+function userReducer(state: IState = initialState, action: UserActions.Types) {
   switch (action.type) {
     case UserActions.LOGIN:
       return {
@@ -16,6 +20,7 @@ export function userReducer(
         },
       };
     case UserActions.LOGOUT:
+      console.log('Logoutt');
       return {
         ...state,
         profile: {
@@ -28,3 +33,26 @@ export function userReducer(
       return state;
   }
 }
+
+/*
+ * Exports
+ *
+ */
+
+export interface IState {
+  profile: {
+    id: string;
+    name: string;
+    email: string;
+  };
+}
+
+export interface AppState {
+  //List of all states
+  user: IState;
+}
+
+export const appReducer: ActionReducerMap<AppState, UserActions.Types> = {
+  //List of all reducers
+  user: userReducer,
+};

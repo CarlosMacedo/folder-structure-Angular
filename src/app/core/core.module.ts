@@ -7,8 +7,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 
-import { appReducer, UserEffects } from '@store/index';
-
+import { appReducer } from '@store/user/user.reducer';
+import { UserEffects } from '@store/user/user.effects';
 import { environment } from '@env';
 
 @NgModule({
