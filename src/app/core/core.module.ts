@@ -1,26 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { EffectsModule } from '@ngrx/effects';
-import { HttpClientModule } from '@angular/common/http';
-import { StoreModule } from '@ngrx/store';
 
-import { appReducer } from '@store/user/user.reducer';
-import { UserEffects } from '@store/user/user.effects';
-import { environment } from '@env';
+import { appReducer, userEfects } from '@store/index';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     HttpClientModule,
-    StoreModule.forRoot(appReducer),
-    StoreDevtoolsModule.instrument({ logOnly: environment.production }),
+    StoreModule.forRoot(appReducer, {
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true,
+        strictStateSerializability: true,
+        strictActionSerializability: true,
+        strictActionWithinNgZone: true,
+        strictActionTypeUniqueness: true,
+      },
+    }),
     StoreRouterConnectingModule.forRoot(),
-    EffectsModule.forRoot([UserEffects]),
+    EffectsModule.forRoot([...userEfects]),
   ],
-  exports: [],
+  exports: [StoreModule, StoreRouterConnectingModule, EffectsModule],
 })
 export class CoreModule {}

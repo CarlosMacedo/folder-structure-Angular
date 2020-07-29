@@ -1,43 +1,5 @@
-import { ActionReducerMap } from '@ngrx/store';
+import { createReducer, on, Action } from '@ngrx/store';
 import * as UserActions from './user.actions';
-
-const initialState: IState = {
-  profile: {
-    id: '',
-    name: '',
-    email: '',
-  },
-};
-
-function userReducer(state: IState = initialState, action: UserActions.Types) {
-  switch (action.type) {
-    case UserActions.LOGIN:
-      return {
-        ...state,
-        profile: {
-          ...state.profile,
-          id: action.payload,
-        },
-      };
-    case UserActions.LOGOUT:
-      console.log('Logoutt');
-      return {
-        ...state,
-        profile: {
-          ...state.profile,
-          id: action.payload,
-        },
-      };
-    case UserActions.LOGIN_START:
-    default:
-      return state;
-  }
-}
-
-/*
- * Exports
- *
- */
 
 export interface IState {
   profile: {
@@ -47,12 +9,45 @@ export interface IState {
   };
 }
 
-export interface AppState {
-  //List of all states
-  user: IState;
-}
-
-export const appReducer: ActionReducerMap<AppState, UserActions.Types> = {
-  //List of all reducers
-  user: userReducer,
+const initialState: IState = {
+  profile: {
+    id: '',
+    name: '',
+    email: '',
+  },
 };
+
+const _userReducer = createReducer(
+  initialState,
+  on(UserActions.login, (state, { payload }) => {
+    return {
+      ...state,
+      profile: {
+        ...state.profile,
+        id: payload,
+      },
+    };
+  }),
+  on(UserActions.loginStart, (state, { payload }) => {
+    return {
+      ...state,
+      profile: {
+        ...state.profile,
+        name: payload,
+      },
+    };
+  }),
+  on(UserActions.logout, (state, { payload }) => {
+    return {
+      ...state,
+      profile: {
+        ...state.profile,
+        email: payload,
+      },
+    };
+  })
+);
+
+export function userReducer(state: IState, action: Action) {
+  return _userReducer(state, action);
+}
