@@ -14,7 +14,7 @@ export class UserEffects {
       switchMap((data) => {
         return of(data).pipe(
           map((data) => {
-            return UserActions.loginStart({ payload: 'Side effect' });
+            return UserActions.loginStart({ payload: 'Side effect! :)' });
           }),
           catchError((err) => {
             //...

@@ -1,9 +1,10 @@
 import { ActionReducerMap } from '@ngrx/store';
 import * as UserActions from './user/user.actions';
-import * as UserEfects from './user/user.effects';
 import * as UserReducer from './user/user.reducer';
+import * as UserSelectors from './user/user.selectors';
+import * as UserEfects from './user/user.effects';
 
-export { UserActions, UserReducer };
+export { UserActions, UserReducer, UserSelectors };
 
 export const userEfects: any[] = [UserEfects.UserEffects];
 
