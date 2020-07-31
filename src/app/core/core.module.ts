@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { StoreModule } from '@ngrx/store';
-import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import {
+  StoreRouterConnectingModule,
+  NavigationActionTiming,
+} from '@ngrx/router-store';
 import { EffectsModule } from '@ngrx/effects';
 
 import { appReducer } from '@store/index';
@@ -27,6 +30,7 @@ import { CustomSerializer } from '@store/router';
     }),
     StoreRouterConnectingModule.forRoot({
       serializer: CustomSerializer,
+      navigationActionTiming: NavigationActionTiming.PostActivation,
     }),
     EffectsModule.forRoot([...userEfects]),
   ],
