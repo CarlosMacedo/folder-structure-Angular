@@ -6,7 +6,9 @@ import { StoreModule } from '@ngrx/store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { EffectsModule } from '@ngrx/effects';
 
-import { appReducer, userEfects } from '@store/index';
+import { appReducer } from '@store/index';
+import { userEfects } from '@store/user';
+import { CustomSerializer } from '@store/router';
 
 @NgModule({
   declarations: [],
@@ -23,7 +25,9 @@ import { appReducer, userEfects } from '@store/index';
         strictActionTypeUniqueness: true,
       },
     }),
-    StoreRouterConnectingModule.forRoot(),
+    StoreRouterConnectingModule.forRoot({
+      serializer: CustomSerializer,
+    }),
     EffectsModule.forRoot([...userEfects]),
   ],
   exports: [StoreModule, StoreRouterConnectingModule, EffectsModule],

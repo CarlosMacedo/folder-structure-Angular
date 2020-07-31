@@ -18,7 +18,7 @@ export class UserEffects {
           }),
           catchError((err) => {
             //...
-            return EMPTY; /*  of( new UserActions.LoginFail(err) ); //avoid kill actions$ with of() */
+            return EMPTY; /*  of( action ); //avoid kill actions$ with of() */
           })
         );
       })

@@ -1,19 +1,15 @@
 import { ActionReducerMap } from '@ngrx/store';
-import * as UserActions from './user/user.actions';
-import * as UserReducer from './user/user.reducer';
-import * as UserSelectors from './user/user.selectors';
-import * as UserEfects from './user/user.effects';
-
-export { UserActions, UserReducer, UserSelectors };
-
-export const userEfects: any[] = [UserEfects.UserEffects];
+import * as fromRouter from '@ngrx/router-store';
+import { UserReducer } from './user';
+import { RouterStateUrl } from './router';
 
 export interface AppState {
   //List of all states
   user: UserReducer.IState;
+  router: RouterStateUrl;
 }
-
 export const appReducer: ActionReducerMap<any, any> = {
   //List of all reducers
   user: UserReducer.userReducer,
+  router: fromRouter.routerReducer,
 };

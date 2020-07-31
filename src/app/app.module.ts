@@ -15,7 +15,10 @@ import { HomePageModule } from './_features/_home-page/_home-page.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    StoreDevtoolsModule.instrument({ logOnly: environment.production }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
     AppRoutingModule,
     BrowserModule,
     CoreModule,
