@@ -1,6 +1,6 @@
 # Angular Folder Structure for Enterprise project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
+[Temporary readme] This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
 ## Development server
 
