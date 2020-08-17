@@ -34,6 +34,11 @@ import { CustomSerializer } from '@store/router';
     }),
     EffectsModule.forRoot([...userEfects]),
   ],
-  exports: [StoreModule, StoreRouterConnectingModule, EffectsModule],
+  exports: [
+    StoreModule,
+    HttpClientModule,
+    StoreRouterConnectingModule,
+    EffectsModule,
+  ],
 })
 export class CoreModule {}
