@@ -25,11 +25,11 @@ import { HomePageModule } from './_features/_home-page/_home-page.module';
     HomePageModule,
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptorServiceService,
-      multi: true,
-    },
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: AuthInterceptorServiceService,
+    //   multi: true,
+    // },
   ],
   bootstrap: [AppComponent],
 })
